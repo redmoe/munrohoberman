@@ -1,0 +1,134 @@
+  html, body, h1 {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    box-sizing:border-box;
+  }
+  body {
+    background: whitesmoke; 
+  }
+  ::selection{
+    background-color:black;
+    color:white;
+  }
+  .grid {
+    width: 75%;
+    margin: 0 auto;   
+  }
+  h3 {
+    size:1vh;
+    text-align: top;
+    margin: 0;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }  
+  .grid .cards p {
+    margin: 0;
+    text-align: justify;
+    color: dimgray;
+  }
+  .grid .nav a:hover {
+    color: #212121;
+    transition: 0.5s;
+  }
+  .grid .nav a {
+    text-decoration: none;
+    color:dimgrey;
+    font-weight: bold;
+  }  
+  .grid .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap:1vw;
+        margin-bottom: 8px;
+
+  }
+/*  .grid .content {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);    
+  }
+  .grid .content img {
+    grid-column: span 2;
+  }*/
+  .card {
+    opacity: 1;
+    width:100%;
+  }
+  .pageContent {
+    text-align: center;
+    width:100%;    
+    display: inline-block;
+    margin:0 auto;
+  }
+  .pageContent p {
+    text-align: justify;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .pageContent img {
+    width:100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+/*    margin: 8px;
+*/  }
+  .pageContent p {
+    font-size:22px;
+  }
+  .grid .cards .card:hover {
+    transition: opacity 0.3s ease;
+    opacity: .5;
+  }
+  .grid .cards a {
+    text-decoration: none;
+    color:black;
+  }
+/*  @media screen and (max-width: 900px) {
+    .grid .cards .card {
+      grid-column: 1/12;
+      grid-row: 8/9;
+    }
+  }*/
+
+/*  .grid .cards .bg {
+    background-color: #aaa;
+
+  }*/
+
+/*  .bg:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    opacity: 0;
+/*    transition: all 1s;
+*/ 
+
+/*  @media screen and (max-width: 900px) {
+    .grid .nav h2 {
+      grid-column: 1/13;
+      grid-row: 1/2;
+      margin-bottom: 1rem;
+    }
+    .grid .nav {
+      grid-column: 1/13;
+      grid-row: 2/3;
+      text-align: left;
+    }
+    .grid .cards {
+      grid-template-rows: repeat(9, 2fr);
+    }
+    .grid .cards .bg {
+      margin-bottom: 1rem;
+    }
+  }*/  
+</style>
