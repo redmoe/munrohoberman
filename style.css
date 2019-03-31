@@ -1,67 +1,171 @@
-  html, body, h1 {
-    margin:0;
-    padding:0;
-    font-family: 'Roboto', sans-serif;
-    color:black;
-    box-sizing:border-box;
-  }
-  body {
-    background: whitesmoke; 
-  }
-  ::selection{
-    background-color:black;
-    color:white;
-  }
-  .grid {
-    width: 75%;
-    margin: 0 auto;   
-  }
-  h3 {
+/* A GOOD SITE FOR CHOOSING UX COLORS 
+https://www.0to255.com */
+/* task: put in alt tags in html for accessibility*/
+
+/* ==========================================================================
+    Global
+ ========================================================================== */
+
+html, body, h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  box-sizing: border-box;
+}
+body {
+  background: whitesmoke; 
+}
+::selection {
+  background-color:black;
+  color:white;
+}
+.grid {
+  width: 75%;
+  margin: 0 auto;   
+}
+
+h3 {
     size:1vh;
     text-align: top;
     margin: 0;
-  }
+}
+
+/* ==========================================================================
+    The nav
+ ========================================================================== */
+
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
     margin-bottom: 8px;
-
   }  
-  .grid .cards p {
-    margin: 0;
-    text-align: justify;
-    color: dimgray;
-  }
   .grid .nav a:hover {
     color: #212121;
     transition: 0.5s;
   }
   .grid .nav a {
     text-decoration: none;
-    color:dimgrey;
-    font-weight: bold;
+    color: slategrey;
   }  
+
+/* ==========================================================================
+    Gallery
+ ========================================================================== */
+
   .grid .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap:1vw;
-        margin-bottom: 8px;
-
+    margin-bottom: 8px;
   }
-/*  .grid .content {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);    
+  .grid .cards p {
+    text-align: center;
+    color: black;
   }
-  .grid .content img {
-    grid-column: span 2;
-  }*/
+  .grid .cards .itchio {
+    color: whitesmoke;
+    background-color:grey;
+    width: 70px;
+    margin: 0 auto;
+    line-height: 2;
+    border-radius:3px;
+  }
+  .grid .cards .itchio:hover {
+    background-color:blue;
+    transition: 0.8s;
+  }
+  .grid .cards .card:hover {
+    transition: opacity 0.3s ease;
+    opacity: .5;
+  }
+  .grid .cards a {
+    text-decoration: none;
+    color: black;
+  }
   .card {
-    opacity: 1;
-    width:100%;
+      width:100%;
   }
+
+
+/* new code here for hover effect */
+
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+}
+
+.hovereffect:hover img {
+  opacity: 0.3;
+  filter: alpha(opacit
+y=40);
+}
+.hovereffect h2 {
+  letter-spacing:1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+}
+
+.hovereffect h2, .hovereffect a, .hovereffect p {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.hovereffect:hover h2, .hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/*.hovereffect p:after {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+}*/
+
+/*.hovereffect p:last-child:after {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  content: '';
+}*/
+
+/* ==========================================================================
+    Page Content
+ ========================================================================== */
+
   .pageContent {
     text-align: center;
     width:100%;    
@@ -82,14 +186,26 @@
   .pageContent p {
     font-size:22px;
   }
-  .grid .cards .card:hover {
-    transition: opacity 0.3s ease;
-    opacity: .5;
-  }
-  .grid .cards a {
-    text-decoration: none;
-    color:black;
-  }
+
+/* ==========================================================================
+    Media Queries
+ ========================================================================== */
+/*.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 992px){
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+}
+@media (min-width: 768px){
+    .col-sm-6{
+      width: 50%;
+    }
+}*/
+
 /*  @media screen and (max-width: 900px) {
     .grid .cards .card {
       grid-column: 1/12;
@@ -133,4 +249,3 @@
       margin-bottom: 1rem;
     }
   }*/  
-</style>
