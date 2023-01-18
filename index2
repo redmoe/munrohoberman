@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Munro Hoberman</title>
+
+<!-- <https://heydays.no/>
+http://www.qianyedan.com/
+http://www.bryantwells.com/ 
+https://codepen.io/Smakosh/pen/BwQBpW
+-->
+<style>
+  html, body, h1 {
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    color:black;
+    box-sizing:border-box;
+/*    cursor: -webkit-image-set(url(images/plus.png) 1x, url(images/plus.png) 2x) 45 46,n-resize;
+*/  }
+
+  body {
+    background: whitesmoke; 
+  }
+
+  ::selection{
+    background-color:black;
+    color:white;
+  }
+
+  .grid {
+  /*  max-width: 1200px;*/
+    width: 85%;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+
+  .grid .nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+/*    margin-bottom: 2rem;
+    padding-left:1rem;*/
+  }
+
+ /* .grid .nav h2 {
+    grid-column: 1/8;
+    margin: 0;
+  }*/
+
+  .gridItem {
+    grid-column: span 1;
+  }
+
+  .grid .nav a {
+    font-weight: bold;
+    color: #6f6f6f;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+
+  .grid .nav a:hover {
+    color: #212121;
+    transition: 0.5s;
+  }
+
+  .grid .nav a:first-child {
+    margin-right: 0.6rem;
+  }
+
+  .grid .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 2fr);
+    grid-row-gap:8px;
+    grid-column-gap:8px;
+/*    border: 2px dashed whitesmoke;
+*/  }
+
+
+  .grid .nav .links {
+    grid-column: 4;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  .grid .cards .card {
+    grid-column: span 1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+/*    padding: 1rem 2rem 4rem 1rem; 
+*/    opacity: .75;
+height: 200px;
+  }
+
+  .bg1 {
+    background-image: url("images/bg-1.png") ;
+  }
+  .bg2 {
+    background-image: url("images/bg-2.png") ;
+  }
+  .bg3 {
+    background-image: url("images/bg-3.png") ;
+  }
+  .bg4 {
+    background-image: url("images/bg-4.png") ;
+  }    
+  .bg5 {
+    background-image: url("images/bg-5.png") ;
+  }
+  .bg6 {
+    background-image: url("images/bg-6.png") ;
+  }
+/*
+  .grid .cards .bg {
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+  }*/
+  .grid .nav .border {
+    grid-column: span 2;
+  }
+  .grid .cards .card:hover {
+    transition: opacity 0.3s ease;
+ 
+    opacity: 1;
+  }
+  .grid .cards a {
+    text-decoration: none;
+  }
+  /*.grid .cards .bg:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+  }
+  .grid .cards .bg:hover:after  {
+    opacity: .5;
+    background-color:black;
+  }  */
+
+/*  @media screen and (max-width: 900px) {
+    .grid .cards .card {
+      grid-column: 1/12;
+      grid-row: 8/9;
+    }
+  }*/
+
+/*  .grid .cards .bg {
+    background-color: #aaa;
+
+  }*/
+
+/*  .bg:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    opacity: 0;
+/*    transition: all 1s;
+*/ 
+
+
+  @media screen and (max-width: 900px) {
+    .grid .nav h2 {
+      grid-column: 1/13;
+      grid-row: 1/2;
+      margin-bottom: 1rem;
+    }
+    .grid .nav {
+      grid-column: 1/13;
+      grid-row: 2/3;
+      text-align: left;
+    }
+    .grid .cards {
+      grid-template-rows: repeat(9, 2fr);
+    }
+    .grid .cards .bg {
+      margin-bottom: 1rem;
+    }
+  }  
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="nav">
+      <h1 class="border">Munro Hoberman</h1>
+      <div class="links">
+        <a class="first" href="https://munro.itch.io/ouro">About</a>
+        <a class="second" href="">Contact</a>
+      </div>
+    </div>
+    <div class="cards">
+      <a href="https://munro.itch.io/ouro" >
+        <div class="card bg1">
+        </div>
+                  <h3>OURO</h3>
+
+      </a>
+      <a href="https://munro.itch.io/cosmic-intruder" >
+        <div class="card bg2">
+          <h3>Cosmic Intruder</h3>
+        </div>
+      </a>      
+      <a href="https://munro.itch.io/ouro" >
+        <div class="card bg3">
+          <h3>Chatbots</h3>
+        </div>
+      </a>  
+      <a href="https://munro.itch.io/ouro" >
+        <div class="card bg4">
+          <h3>Boilerplate</h3>
+        </div>
+      </a>    
+       <a href="https://munro.itch.io/ouro" >
+        <div class="card bg5">
+          <h3>Boilerplate</h3>
+        </div>
+      </a>
+      <a href="https://munro.itch.io/sushibelt" >
+        <div class="card bg6">
+          <h3>Health Food Inspector Extraordinaire~</h3>
+        </div>
+      </a>                            
+    </div>
+  </div>
+</body>
+</html>

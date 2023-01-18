@@ -1,3 +1,3 @@
 # munrohoberman
-My website! Yay!
+My website!
 Isn't it cool!
